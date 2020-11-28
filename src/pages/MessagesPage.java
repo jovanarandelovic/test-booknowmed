@@ -18,4 +18,14 @@ public class MessagesPage extends BasicPage {
 	public String getMainPageMsg() {
 		return this.driver.findElement(By.xpath("/html/body/app-root/ng-component/section[1]/div/h1")).getText();
 	}
+	
+	public String getStep1Message() {
+		return this.driver.findElement(By.xpath("//*/bnm-account-info/h1")).getText();
+	}
+	
+	public String getRegisterMessage() {
+		return this.driver.findElement(By.xpath("//*/bnm-paper/h1")).getText();
+	}
+	
+	
 }
