@@ -33,7 +33,7 @@ public class BasicTest {
 		this.driver = new ChromeDriver();
 		this.wait = new WebDriverWait(driver, 15);
 		this.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		this.driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		this.driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		this.js = (JavascriptExecutor) driver;
 	}
 
