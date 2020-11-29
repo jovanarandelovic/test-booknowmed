@@ -13,185 +13,174 @@ public class RegistrationPage extends BasicPage {
 		super(driver, wait, js);
 	}
 
-	public WebElement getCancelButton() {
-		return this.driver.findElement(By.xpath("//*/bnm-header-navigation/button"));
+	protected WebElement getCancelButton() {
+		return this.driver.findElement(By.xpath("//bnm-header-navigation/button"));
 	}
 
-	public WebElement getTitle() {
+	protected WebElement getTitle() {
 		return this.driver.findElement(By.xpath("//select[@name='title']"));
 	}
 
-	public WebElement getPatientTitle() {
+	protected WebElement getPatientTitle() {
 		return this.driver.findElement(By.xpath(
 				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-someone/div/div[1]/label/bnm-select/select"));
-	}
+	}			
 
-	public WebElement getFirstName() {
+	protected WebElement getFirstName() {
 		return this.driver.findElement(By.xpath("//input[@name='firstName']"));
 	}
 
-	public WebElement getPatientFirstName() {
+	protected WebElement getPatientFirstName() {
 		return this.driver.findElement(By.xpath(
 				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-someone/div/div[2]/div[1]/label/input"));
 	}
 
-	public WebElement getLastName() {
+	protected WebElement getLastName() {
 		return this.driver.findElement(By.xpath("//input[@name='lastName']"));
 	}
 
-	public WebElement getPatientLastName() {
+	protected WebElement getPatientLastName() {
 		return this.driver.findElement(By.xpath(
 				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-someone/div/div[2]/div[2]/label/input"));
 	}
 
-	public WebElement getBirthDate() {
+	protected WebElement getBirthDate() {
 		return this.driver.findElement(By.xpath("//input[@name='birthdate']"));
 	}
 
-	public WebElement getPatientBirthDate() {
+	protected WebElement getPatientBirthDate() {
 		return this.driver.findElement(By.xpath(
 				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-someone/div/div[3]/label/input"));
 	}
 
-	public WebElement getEmail() {
+	protected WebElement getEmail() {
 		return this.driver.findElement(By.xpath("//input[@name='email']"));
 	}
 
-	public WebElement getPatientEmail() {
+	protected WebElement getPatientEmail() {
 		return this.driver.findElement(By.xpath(
 				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-someone/div/div[4]/label/input"));
 	}
 
-	public WebElement getPassword() {
+	protected WebElement getPassword() {
 		return this.driver.findElement(By.xpath("//input[@type='password']"));
 	}
 
-	public WebElement getCountryCode() {
+	protected WebElement getCountryCode() {
 		return this.driver.findElement(By.xpath("//input[@type='tel']"));
 	}
 
-	public WebElement getPatientCountryCode() {
+//	only abs path
+	protected WebElement getPatientCountryCode() {
 		return this.driver.findElement(By.xpath(
 				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-someone/div/div[5]/div[1]/label/bnm-country-code-input/bnm-padded-input/input"));
 	}
 
-	public WebElement getPhone() {
+	protected WebElement getPhone() {
 		return this.driver.findElement(By.xpath("//input[@name='phoneNumber']"));
 	}
 
-	public WebElement getPatientPhone() {
+//	only abs path
+	protected WebElement getPatientPhone() {
 		return this.driver.findElement(By.xpath(
 				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-someone/div/div[5]/div[2]/label/input"));
 	}
 
-	public WebElement getBookingForMyself() {
-		return this.driver.findElement(By.xpath("//*/fieldset/div[1]/div[1]/label/bnm-radio"));
+	protected WebElement getBookingForMyself() {
+		return this.driver.findElement(By.xpath("//fieldset/div[1]/div[1]/label/bnm-radio"));
 	}
 
-	public WebElement getBookingForSomeoneElse() {
-		return this.driver.findElement(By.xpath("//*/fieldset/div[1]/div[2]/label/bnm-radio"));
+	protected WebElement getBookingForSomeoneElse() {
+		return this.driver.findElement(By.xpath("//fieldset/div[1]/div[2]/label/bnm-radio"));
 	}
 
-	public WebElement getBookingForBoth() {
-		return this.driver.findElement(By.xpath("//*/fieldset/div[1]/div[3]/label/bnm-radio"));
+	protected WebElement getBookingForBoth() {
+		return this.driver.findElement(By.xpath("//fieldset/div[1]/div[3]/label/bnm-radio"));
 	}
 
-	public WebElement getNextButton() {
+	protected WebElement getNextButton() {
 		return this.driver.findElement(
 				By.xpath("/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/div/button"));
 	}
 
-	public WebElement getMsEhicYesButton() {
+	protected WebElement getEhicYes() {
+		return this.driver.findElement(By.xpath("//fieldset/div[1]/div[1]/label/bnm-radio"));
+	}
+
+	protected WebElement getEhicPatientYes() {
 		return this.driver.findElement(By.xpath(
-				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-yourself/div/div[1]/fieldset/div[1]/div[1]/label/bnm-radio/input"));
+				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-someone/div/div[6]/fieldset/div[1]/div[1]/label/bnm-radio"));
 	}
 
-	public WebElement getMsEhicNoButton() {
+	protected WebElement getEhicNo() {
+		return this.driver.findElement(By.xpath("//*/label/bnm-radio[@name='isEhicHolder']/input[@value='false']"));
+	}
+
+	protected WebElement getEhicPatientNo() {
 		return this.driver.findElement(By.xpath(
-				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-yourself/div/div[1]/fieldset/div[1]/div[2]/label/bnm-radio/input"));
+				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-someone/div/div[6]/fieldset/div[1]/div[2]/label/bnm-radio"));
 	}
 
-	public WebElement getSeEhicYesButton() {
-		return this.driver.findElement(By.xpath(
-				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-someone/div/div[6]/fieldset/div[1]/div[1]/label/bnm-radio/span"));
+	protected WebElement getSpecialReqYes() {
+		return this.driver.findElement(By.xpath("//*[@name='isSpecialHolder']/input[@value='true']"));
 	}
 
-	public WebElement getSeEhicNoButton() {
-		return this.driver.findElement(By.xpath(
-				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-someone/div/div[6]/fieldset/div[1]/div[2]/label/bnm-radio/span"));
+	protected WebElement getSpecialReqNo() {
+		return this.driver.findElement(By.xpath("//*[@name='isSpecialHolder']/input[@value='false']"));
 	}
 
-	public WebElement getSpecialReqYesButton() {
-		return this.driver.findElement(By.xpath(
-				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-yourself/div/div[2]/fieldset/div[1]/div[1]/label/bnm-radio/input"));
+	protected WebElement getHiv() {
+		return this.driver.findElement(By.xpath("//bnm-checkbox[@formcontrolname='isHivPositive']"));
 	}
 
-	public WebElement getSpecialReqNoButton() {
-		return this.driver.findElement(By.xpath(
-				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-yourself/div/div[2]/fieldset/div[1]/div[2]/label/bnm-radio/input"));
+	protected WebElement getHepB() {
+		return this.driver.findElement(By.xpath("//bnm-checkbox[@formcontrolname='isHbvPositive']"));
 	}
 
-	public WebElement getSpecialReqPatientYesButton() {
-		return this.driver.findElement(By.xpath(
-				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-someone/div/div[7]/fieldset/div[1]/div[1]/label/bnm-radio/span"));
+	protected WebElement getHepC() {
+		return this.driver.findElement(By.xpath("//bnm-checkbox[@formcontrolname='isHcvPositive']"));
 	}
 
-	public WebElement getSpecialReqPatientNoButton() {
-		return this.driver.findElement(By.xpath(
-				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-someone/div/div[7]/fieldset/div[1]/div[2]/label/bnm-radio/span"));
-	}
-
-	public WebElement getHivCheck() {
-		return this.driver.findElement(By.xpath("//*/fieldset/div/div[1]/label/bnm-checkbox/span"));
-	}
-
-	public WebElement getHepBCheck() {
-		return this.driver.findElement(By.xpath("//*/fieldset/div/div[2]/label/bnm-checkbox/span"));
-	}
-
-	public WebElement getHepCCheck() {
-		return this.driver.findElement(By.xpath("//*/fieldset/div/div[3]/label/bnm-checkbox/span"));
-	}
-
-	public WebElement getHomeClinic() {
+	protected WebElement getHomeClinic() {
 		return this.driver.findElement(By.xpath("//input[@formcontrolname='homeClinicName']"));
 	}
 
-	public WebElement getHomeClinicCity() {
+	protected WebElement getHomeClinicCity() {
 		return this.driver.findElement(By.xpath("//input[@formcontrolname='homeClinicLocation']")); // fine
 	}
 
 //clinic country code only abs path
-	public WebElement getClinicCountryCode() {
+	protected WebElement getClinicCountryCode() {
 		return this.driver.findElement(By.xpath(
 				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-yourself/div/div[4]/div[3]/div[1]/label/bnm-country-code-input/bnm-padded-input/input"));
 
 	}
 
-	public WebElement getPatientClinicCountryCode() {
+//only abs path
+	protected WebElement getPatientClinicCountryCode() {
 
 		return this.driver.findElement(By.xpath(
 				"/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/bnm-booking-someone/div/div[9]/div[3]/div[1]/label/bnm-country-code-input/bnm-padded-input/input"));
 	}
 
-	public WebElement getClinicPhone() {
+	protected WebElement getClinicPhone() {
 		return this.driver.findElement(By.xpath("//input[@name='homeClinicPhoneNumber']"));
 	}
 
-	public WebElement getNewsletterCheck() {
+	protected WebElement getNewsletterCheck() {
 		return this.driver.findElement(By.xpath("//bnm-checkbox[@formcontrolname='wantsNewsletter']"));
 	}
 
-	public WebElement getTermsCheck() {
+	protected WebElement getTermsCheck() {
 		return this.driver.findElement(By.xpath("//input[@name='agree']"));
 	}
 
-	public WebElement getBackButton() {
+	protected WebElement getBackButton() {
 		return this.driver.findElement(
 				By.xpath("/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/div/button[1]"));
 	}
 
-	public WebElement getRegisterButton() {
+	protected WebElement getRegisterButton() {
 		return this.driver.findElement(
 				By.xpath("/html/body/app-root/bnm-patient-register/bnm-layout/div/main/bnm-paper/form/div/button[2]"));
 	}
@@ -238,41 +227,47 @@ public class RegistrationPage extends BasicPage {
 
 	}
 
+	public void isSecialReq(boolean specialReq, boolean hiv, boolean hepB, boolean hepC) {
+		if (specialReq) {
+			js.executeScript("arguments[0].click();", this.getSpecialReqYes());
+			if (hiv && hepB && hepC) {
+				js.executeScript("arguments[0].click();", this.getHiv());
+				js.executeScript("arguments[0].click();", this.getHepB());
+				js.executeScript("arguments[0].click();", this.getHepC());
+			} else if (hiv && hepB) {
+				js.executeScript("arguments[0].click();", this.getHiv());
+				js.executeScript("arguments[0].click();", this.getHepB());
+			} else if (hiv && hepC) {
+				js.executeScript("arguments[0].click();", this.getHiv());
+				js.executeScript("arguments[0].click();", this.getHepC());
+			} else if (hepB && hepC) {
+				js.executeScript("arguments[0].click();", this.getHepB());
+				js.executeScript("arguments[0].click();", this.getHepC());
+			} else if (hiv) {
+				js.executeScript("arguments[0].click();", this.getHiv());
+			} else if (hepB) {
+				js.executeScript("arguments[0].click();", this.getHepB());
+			} else if (hepC) {
+				js.executeScript("arguments[0].click();", this.getHepC());
+			}
+		} else {
+			js.executeScript("arguments[0].click();", this.getSpecialReqNo());
+
+		}
+	}
+
 	public void bookingForMyself(boolean ehic, boolean specialReq, boolean hiv, boolean hepB, boolean hepC,
 			String homeClinicName, String homeClinicCity, String homeClinicCountryCode, String homeClinicPhone,
 			String newsletter, boolean terms) throws InterruptedException {
 		if (ehic) {
-			js.executeScript("arguments[0].click();", this.getMsEhicYesButton());
+			js.executeScript("arguments[0].click();", this.getEhicYes());
 		} else {
-			js.executeScript("arguments[0].click();", this.getMsEhicNoButton());
+			js.executeScript("arguments[0].click();", this.getEhicNo());
 		}
 
-		if (specialReq) {
-			js.executeScript("arguments[0].click();", this.getSpecialReqYesButton());
-			if (hiv && hepB && hepC) {
-				js.executeScript("arguments[0].click();", this.getHivCheck());
-				js.executeScript("arguments[0].click();", this.getHepBCheck());
-				js.executeScript("arguments[0].click();", this.getHepCCheck());
-			} else if (hiv && hepB) {
-				js.executeScript("arguments[0].click();", this.getHivCheck());
-				js.executeScript("arguments[0].click();", this.getHepBCheck());
-			} else if (hiv && hepC) {
-				js.executeScript("arguments[0].click();", this.getHivCheck());
-				js.executeScript("arguments[0].click();", this.getHepCCheck());
-			} else if (hepB && hepC) {
-				js.executeScript("arguments[0].click();", this.getHepBCheck());
-				js.executeScript("arguments[0].click();", this.getHepCCheck());
-			} else if (hiv) {
-				js.executeScript("arguments[0].click();", this.getHivCheck());
-			} else if (hepB) {
-				js.executeScript("arguments[0].click();", this.getHepBCheck());
-			} else if (hepC) {
-				js.executeScript("arguments[0].click();", this.getHepCCheck());
-			}
-		} else {
-			js.executeScript("arguments[0].click();", this.getSpecialReqNoButton());
+		Thread.sleep(1500);
 
-		}
+		this.isSecialReq(specialReq, hiv, hepB, hepC);
 
 		Thread.sleep(1500);
 		this.getHomeClinic().clear();
@@ -296,18 +291,15 @@ public class RegistrationPage extends BasicPage {
 			js.executeScript("arguments[0].click();", this.getTermsCheck());
 		}
 
-		js.executeScript("arguments[0].click();", this.getRegisterButton());
-
 		Thread.sleep(2500);
 
 	}
 
 	public void bookingForSomeoneElse(String patientTitle, String patientFirstName, String patientLastName,
 			String patientBirthDate, String patientEmail, String patientCountryCode, String patientPhone,
-			boolean patientEhic, boolean patientSpecialReq, boolean patientHiv, boolean patientHepB,
-			boolean patientHepC, String patientHomeClinicName, String patientHomeClinicCity,
-			String patientHomeClinicCountryCode, String patientHomeClinicPhone, String newsletter, boolean terms)
-			throws InterruptedException {
+			boolean patientEhic, boolean specialReq, boolean hiv, boolean hepB, boolean hepC,
+			String patientHomeClinicName, String patientHomeClinicCity, String patientHomeClinicCountryCode,
+			String patientHomeClinicPhone, String newsletter, boolean terms) throws InterruptedException {
 
 		Select select = new Select(this.getPatientTitle());
 		Thread.sleep(1000);
@@ -325,39 +317,19 @@ public class RegistrationPage extends BasicPage {
 		this.getPatientCountryCode().sendKeys(patientCountryCode);
 		this.getPatientPhone().clear();
 		this.getPatientPhone().sendKeys(patientPhone);
+		
+		Thread.sleep(1000);
 
 		if (patientEhic) {
-			js.executeScript("arguments[0].click();", this.getSeEhicYesButton());
+			js.executeScript("arguments[0].click();", this.getEhicPatientYes());
 		} else {
-			js.executeScript("arguments[0].click();", this.getSeEhicNoButton());
+			js.executeScript("arguments[0].click();", this.getEhicPatientNo());
 		}
 
-		if (patientSpecialReq) {
-			js.executeScript("arguments[0].click();", this.getSpecialReqPatientYesButton());
-			if (patientHiv && patientHepB && patientHepC) {
-				js.executeScript("arguments[0].click();", this.getHivCheck());
-				js.executeScript("arguments[0].click();", this.getHepBCheck());
-				js.executeScript("arguments[0].click();", this.getHepCCheck());
-			} else if (patientHiv && patientHepB) {
-				js.executeScript("arguments[0].click();", this.getHivCheck());
-				js.executeScript("arguments[0].click();", this.getHepBCheck());
-			} else if (patientHiv && patientHepC) {
-				js.executeScript("arguments[0].click();", this.getHivCheck());
-				js.executeScript("arguments[0].click();", this.getHepCCheck());
-			} else if (patientHepB && patientHepC) {
-				js.executeScript("arguments[0].click();", this.getHepBCheck());
-				js.executeScript("arguments[0].click();", this.getHepCCheck());
-			} else if (patientHiv) {
-				js.executeScript("arguments[0].click();", this.getHivCheck());
-			} else if (patientHepB) {
-				js.executeScript("arguments[0].click();", this.getHepBCheck());
-			} else if (patientHepC) {
-				js.executeScript("arguments[0].click();", this.getHepCCheck());
-			}
-		} else {
-			js.executeScript("arguments[0].click();", this.getSpecialReqPatientNoButton());
+		Thread.sleep(1500);
 
-		}
+		this.isSecialReq(specialReq, hiv, hepB, hepC);
+
 		Thread.sleep(1500);
 		this.getHomeClinic().clear();
 		this.getHomeClinic().sendKeys(patientHomeClinicName);
@@ -379,14 +351,13 @@ public class RegistrationPage extends BasicPage {
 		if (terms) {
 			js.executeScript("arguments[0].click();", this.getTermsCheck());
 		}
-		js.executeScript("arguments[0].click();", this.getRegisterButton());
 
 		Thread.sleep(2500);
 
 	}
 
-	// cannot recycle bookingForSomeoneElse, problems start in hiv, hepB, hepC,
-	// clinic name, clinic city when filling in Patient information
+	// cannot recycle bookingForMyself() and bookingForSomeoneElse() methods properly
+	// this part needs modification
 	public void bookingForBoth(boolean ehic, boolean specialReq, boolean hiv, boolean hepB, boolean hepC,
 			String homeClinicName, String homeClinicCity, String homeClinicCountryCode, String homeClinicPhone,
 			String patientTitle, String patientFirstName, String patientLastName, String patientBirthDate,
@@ -396,9 +367,20 @@ public class RegistrationPage extends BasicPage {
 			String patientHomeClinicPhone, String newsletter, boolean terms) throws InterruptedException {
 		this.bookingForMyself(ehic, specialReq, hiv, hepB, hepC, homeClinicName, homeClinicCity, homeClinicCountryCode,
 				homeClinicPhone, newsletter, terms);
+		
+		Thread.sleep(2500);
+	
+		js.executeScript("arguments[0].click();", this.getNextButton());
+		
+		Thread.sleep(2500);
+
 		this.bookingForSomeoneElse(patientTitle, patientFirstName, patientLastName, patientBirthDate, patientEmail,
 				patientCountryCode, patientPhone, patientEhic, patientSpecialReq, patientHiv, patientHepB, patientHepC,
 				patientHomeClinicName, patientHomeClinicCity, patientHomeClinicCountryCode, patientHomeClinicPhone,
 				newsletter, terms);
+	}
+
+	public void register() {
+		js.executeScript("arguments[0].click();", this.getRegisterButton());
 	}
 }
