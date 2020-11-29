@@ -79,3 +79,4 @@ public class LoginPage extends BasicPage {
 		this.getEmail().sendKeys(email);
 	}
 }
+}

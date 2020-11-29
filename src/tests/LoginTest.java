@@ -106,7 +106,7 @@ public class LoginTest extends BasicTest {
 		lp.getPassword().clear();
 		lp.getPassword().sendKeys("password123");
 		lp.getLogIn().click();
-		
+		a
 		sa.assertTrue(mp.getNotVerifiedMessage().contains("You are trying to log in with an email that hasn't been verified."), "[ERROR] You logged in with unverified email!");
 	}
 }
