@@ -102,7 +102,7 @@ public class RegistrationTest extends BasicTest {
 		MessagesPage mp = new MessagesPage(driver, wait, js);
 
 		// Booking
-		rp.setRegistrationInfo("Ms", "Dummy", "User", "01/01/1980", "dummyemailmyself@email.com", "password123", "381",
+		rp.setRegistrationInfo("Ms", "Dummy", "User", "01/01/1980", "emailmyself@email.com", "password123", "381",
 				"123456789", "Myself");
 
 		Thread.sleep(1000);
@@ -127,7 +127,7 @@ public class RegistrationTest extends BasicTest {
 		MessagesPage mp = new MessagesPage(driver, wait, js);
 
 		// Booking
-		rp.setRegistrationInfo("Ms", "Dummy", "User", "01/01/1980", "dummyemailsomeone@email.com", "password123", "381",
+		rp.setRegistrationInfo("Ms", "Dummy", "User", "01/01/1980", "emailsomeone@email.com", "password123", "381",
 				"123456789", "Someone else");
 
 		Thread.sleep(1000);
@@ -155,7 +155,7 @@ public class RegistrationTest extends BasicTest {
 		MessagesPage mp = new MessagesPage(driver, wait, js);
 
 		// Booking
-		rp.setRegistrationInfo("Ms", "Dummy", "User", "01/01/1980", "dummyemailboth@email.com", "password123", "381",
+		rp.setRegistrationInfo("Ms", "Dummy", "User", "01/01/1980", "emailboth@email.com", "password123", "381",
 				"123456789", "Both");
 
 		Thread.sleep(1000);
