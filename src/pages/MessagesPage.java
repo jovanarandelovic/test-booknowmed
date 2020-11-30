@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MessagesPage extends BasicPage {
@@ -40,6 +39,9 @@ public class MessagesPage extends BasicPage {
 		return this.driver.findElement(By.xpath("//form/div[1]/div/bnm-validation")).getText();
 	}
 	public String getLoggedInMessage() {
-		return this.driver.findElement(By.xpath("///html/body/app-root/ng-component/bnm-layout/div[2]/main/div[1]/h1")).getText();
+		return this.driver.findElement(By.xpath("/html/body/app-root/ng-component/bnm-layout/div[2]/main/div[1]/h1")).getText();
+	}
+	public String getInvalidCombo() {
+		return this.driver.findElement(By.xpath("//form/bnm-validation")).getText();
 	}
 }
