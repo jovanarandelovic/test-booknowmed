@@ -16,15 +16,15 @@ public class LoginPage extends BasicPage {
 		return this.driver.findElement(By.xpath("//a[@aria-label='Close modal']"));
 	}
 
-	public WebElement getEmail() {
+	protected WebElement getEmail() {
 		return this.driver.findElement(By.xpath("//input[@type = 'email']"));
 	}
-	
+
 	protected WebElement getRememberMe() {
 		return this.driver.findElement(By.xpath("//bnm-checkbox[@formcontrolname='rememberMe']"));
 	}
 
-	public WebElement getPassword() {
+	protected WebElement getPassword() {
 		return this.driver.findElement(By.xpath("//input[@type='password']"));
 	}
 
@@ -43,8 +43,8 @@ public class LoginPage extends BasicPage {
 	protected WebElement getPrivacyPolicy() {
 		return this.driver.findElement(By.xpath("//a[@href='/privacy-policy']"));
 	}
-	
-	public WebElement getLogIn() {
+
+	protected WebElement getLogIn() {
 		return this.driver.findElement(By.xpath("//button[@type='submit']"));
 	}
 
@@ -78,5 +78,22 @@ public class LoginPage extends BasicPage {
 		this.getEmail().clear();
 		this.getEmail().sendKeys(email);
 	}
-}
+
+	public void login(String email, String password, boolean rememberMe) throws InterruptedException {
+		this.navigateToLoginPage();
+
+		this.getEmail().clear();
+		this.getEmail().sendKeys(email);
+		this.getPassword().clear();
+		this.getPassword().sendKeys(password);
+
+		if (rememberMe == false) {
+			this.getRememberMe().click();
+		}
+
+		this.getLogIn().click();
+
+		Thread.sleep(2500);
+
+	}
 }
